@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\categoriesController;
 use App\Http\Controllers\customersController;
+use App\Http\Controllers\ ProductsController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,3 +26,9 @@ Route::put('/customer/{id}', [customersController::class, 'update'])->name('cust
 Route::delete('/customer/{id}', [customersController::class, 'destroy'])->name('customers.destroy');
 
 //product routes
+Route::get('/product', [ProductsController::class, 'index'])->name('products.index');
+Route::get('/product/create', [ProductsController::class, 'create'])->name('products.create');
+Route::post('/product', [ProductsController::class, 'store'])->name('products.store');
+Route::get('/product/{id}/edit', [ProductsController::class, 'edit'])->name('products.edit');
+Route::put('/product/{id}', [ProductsController::class, 'update'])->name('products.update');
+Route::delete('/product/{id}', [ProductsController::class, 'destroy'])->name('products.destroy');

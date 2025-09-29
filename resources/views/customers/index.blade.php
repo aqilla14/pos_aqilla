@@ -1,4 +1,4 @@
-<h3>Categories</h3>
+<h3>Customers</h3>
 <table border="1">
 <thead>
 <tr>
